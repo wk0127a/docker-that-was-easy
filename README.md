@@ -10,10 +10,10 @@ docker run wk0127/easy
 
 ### docker-compose
 
-version: '3.3'
+  version: '3.3'
 
-services:
-  easy:
-    image: wk0127/easy
-    container_name: easy
-    restart: unless-stopped
+  services:
+    easy:
+      image: wk0127/easy
+      container_name: easy
+      restart: unless-stopped
