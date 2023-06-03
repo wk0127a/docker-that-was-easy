@@ -9,7 +9,7 @@ This is a rather silly and useless container I created to replace the old school
 docker run wk0127/easy
 
 ### docker-compose
-
+```
   version: '3.3'
 
   services:
@@ -17,3 +17,4 @@ docker run wk0127/easy
       image: wk0127/easy
       container_name: easy
       restart: unless-stopped
+```
