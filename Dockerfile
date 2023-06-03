@@ -1,5 +1,5 @@
 FROM nginx:latest
 
-COPY ./html /usr/share/nginx/html
+ADD ./html /usr/share/nginx/html
 
 EXPOSE 80
