@@ -5,10 +5,11 @@ This is a rather silly and useless container I created to replace the old school
 ## Examples:
 
 ### docker run
-
+```
 docker run wk0127/easy
+```
 
-### docker-compose
+### docker-compose.yaml
 ```
   version: '3.3'
 
