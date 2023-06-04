@@ -1,0 +1,29 @@
+kind: pipeline
+type: docker
+name: build
+steps:
+  - name: docker
+    image: plugins/docker
+    pull: always
+    volumes:
+      - name: docker_sock
+        path: /var/run/docker.sock
+    settings:
+      repo: wk0127/easy
+      dockerfile: ./Dockerfile
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      when: 
+        branch: main
+        event: push
+
+trigger:
+  branch:
+    - main
+
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
